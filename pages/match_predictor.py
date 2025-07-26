@@ -9,7 +9,7 @@ st.title("Player Comparison")
 # -------------------------------
 # Load dataset
 # -------------------------------
-df = pd.read_csv("src/output/feature_dataset.csv")
+df = pd.read_csv("src/output/feature_dataset_light.csv")
 players_2024 = df[df['tourney_date'].astype(str).str.startswith('2024')]
 unique_players = sorted(set(players_2024['winner_name']).union(set(players_2024['loser_name'])))
 

@@ -7,7 +7,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 model = CatBoostClassifier()
 model.load_model(os.path.join(BASE_DIR, "model", "catboost_model.cbm"))
 
-df = pd.read_csv(os.path.join(BASE_DIR, "output", "feature_dataset.csv"))
+df = pd.read_csv(os.path.join(BASE_DIR, "output", "feature_dataset_light.csv"))
 
 features = [
     'ranking_diff', 'rank_points_diff',
