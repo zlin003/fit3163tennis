@@ -87,6 +87,9 @@ model = CatBoostClassifier(
 
 model.fit(train_pool, eval_set=test_pool)
 
+model.save_model("../model/catboost_model.cbm")
+print("model saved to ../model/catboost_model.cbm")
+
 # Evaluate model
 y_pred = model.predict(X_test)
 print("\n🎯 Accuracy:", round(accuracy_score(y_test, y_pred), 4))
